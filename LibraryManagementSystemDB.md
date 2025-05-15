@@ -28,3 +28,55 @@ member can provide multiple reviews, and a book may receive many reviews.
    1. Include entities, attributes, keys, relationships, cardinality, and participation. 
    2. Use clear notation and include weak entities and M: N relationships. 
 
+**1. libraries:**
+- Attributes:
+  - ID (Primary Key)
+  - Name
+  - Location
+  - Contact_Number (Multi-valued)
+  - Established_Year
+    
+**2. Book:**
+- Attributes:
+   - ID (Primary Key)
+   - ISBN
+   - Title
+   - Genre
+   - Price
+   - Availability_S_tatus
+   - Shelf_L_ocation
+
+**3. Member:**
+- Attributes:
+   - ID (Primary Key)
+   - Full_Name
+   - Email
+   - Phone_Number
+   - Membership_Start_Date
+
+**4. Loan:**
+- Attributes:
+  - Loan_Date
+  - Due_Date
+  - Return_Date
+
+**5. Payment:**
+- Attributes:
+  - ID (Primary Key)
+  - Payment_Date
+  - Amount
+  - Method
+
+**6. Staff:**
+- Attributes:
+  - Staff_ID (Primary Key)
+  - Full_Name
+  - Position
+  - Contact_Number
+
+**7. Review:**
+- Attributes:
+  - Rating
+  - Comments
+
+![ERD Diagram](./image/LibraryManagmenetSystem.png)]
