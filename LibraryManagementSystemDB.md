@@ -21,3 +21,10 @@ works at only one library.
 Members may also review books, where a review includes a rating, comments, and 
 review date. Each review is linked to a specific book and a specific member. A 
 member can provide multiple reviews, and a book may receive many reviews. 
+
+
+## Draw the ERD Diagram:
+  
+   1. Include entities, attributes, keys, relationships, cardinality, and participation. 
+   2. Use clear notation and include weak entities and M: N relationships. 
+
