@@ -79,4 +79,6 @@ member can provide multiple reviews, and a book may receive many reviews.
   - Rating
   - Comments
 
-![ERD Diagram](./image/LibraryManagmenetSystem.png)]
+![ERD Diagram](./image/LibraryManagmenetSystemERD.png)
+
+## Map the ERD to Relational Schema:
