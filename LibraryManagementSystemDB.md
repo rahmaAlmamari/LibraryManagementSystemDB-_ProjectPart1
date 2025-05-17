@@ -82,5 +82,44 @@ member can provide multiple reviews, and a book may receive many reviews.
 ![ERD Diagram](./image/LibraryManagmenetSystemERD.png)
 
 ## Map the ERD to Relational Schema:
+- Convert the ERD into relational tables with PKs and FKs defined. 
 
 ![Mapping Diagram](./image/LibraryManagmenetSystemMapping.png)
+
+## Normalization Practice 
+- Choose 2–3 tables to normalize. 
+- Show step-by-step conversion to 1NF → 2NF → 3NF. 
+- Justify each normalization step. 
+
+**1. Book table:**
+|BookID |ISBN |Title |Genre |Shelf_Location |Price |Availability_Status |LibraryID |MemberID |
+|-------|-----|------|------|---------------|------|--------------------|----------|---------|
+
+- First Normal Form (1NF) 
+  This step will not be executed because there are no duplicates in the columns.
+
+- Second Normal Form (2NF) and Third Normal Form (3NF) 
+
+|BookID |ISBN |Title |Genre |Shelf_Location |Price |Availability_Status |
+|-------|-----|------|------|---------------|------|--------------------|
+
+|BookID |LibraryID |MemberID |
+|-------|----------|---------|
+
+In these two steps we need to make sure that all non-key attributes must depend on the whole primary key 
+and non-key attributes should depend only on the key, not other non-key attributes
+
+**2. Member:**
+|MemberID |Email |Full_Name |Membership_Start_Date |LibraryID |
+|---------|------|----------|----------------------|----------|
+
+- First Normal Form (1NF) 
+  This step will not be executed because there are no duplicates in the columns.
+
+- Second Normal Form (2NF) and Third Normal Form (3NF) 
+
+|MemberID |Email |Full_Name |Membership_Start_Date |
+|---------|------|----------|----------------------|
+
+|MemberID |LibraryID |
+|---------|----------|
