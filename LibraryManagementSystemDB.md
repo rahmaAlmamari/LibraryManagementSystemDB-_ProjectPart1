@@ -502,4 +502,12 @@ WHERE BookID = 4;
 INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
 ('Issued', 1, 30, 30);
 ```
+### 7. Try updating a book’s genre to: 
+- A value not included in your allowed genre list (e.g., 'Sci-Fi') 
+
+```sql
+UPDATE Book 
+SET Genre = 'Sci-Fi'
+WHERE BookID = 1;
+```
 

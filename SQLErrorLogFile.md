@@ -101,3 +101,20 @@ The statement has been terminated.
 Completion time: 2025-05-18T14:52:30.7892802+04:00
 ```
 I understand that this is because the member and book does not exist in the Member and Book table. So, I have to insert the member and book first and then insert the loan.
+
+## 5. Case 5:
+I am trying to updating a book’s genre to 'Sci-Fi' which does not inclued in genre value by this command:
+```sql
+UPDATE Book 
+SET Genre = 'Sci-Fi'
+WHERE BookID = 1;
+```
+but I am getting the following error:
+```sql
+Msg 547, Level 16, State 0, Line 367
+The UPDATE statement conflicted with the CHECK constraint "Ch_Value_Is". The conflict occurred in database "LibraryManagementSystem", table "dbo.Book", column 'Genre'.
+The statement has been terminated.
+
+Completion time: 2025-05-18T15:01:12.1841277+04:00
+```
+I understand that this is because genre have a set of value which need to be follow
