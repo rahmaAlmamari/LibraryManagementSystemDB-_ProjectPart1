@@ -494,3 +494,12 @@ DELETE FROM Book
 WHERE BookID = 4; 
 ```
 
+### 6. Try inserting a loan for: 
+- A member who doesn’t exist 
+- A book that doesn’t exist 
+
+```sql
+INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
+('Issued', 1, 30, 30);
+```
+

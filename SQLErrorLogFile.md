@@ -86,3 +86,18 @@ WHERE MemberID = 5;
 DELETE FROM Member 
 WHERE MemberID = 5;
 ```
+## 4. Case 4:
+I am trying to insert a loan for a member who doesn’t exist, a book that doesn’t exist by this command:
+```sql
+INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
+('Issued', 1, 30, 30);
+```
+but I am getting the following error:
+```sql
+Msg 547, Level 16, State 0, Line 362
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Member_bo__Membe__6A30C649". The conflict occurred in database "LibraryManagementSystem", table "dbo.Member", column 'MemberID'.
+The statement has been terminated.
+
+Completion time: 2025-05-18T14:52:30.7892802+04:00
+```
+I understand that this is because the member and book does not exist in the Member and Book table. So, I have to insert the member and book first and then insert the loan.
