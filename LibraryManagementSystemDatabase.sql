@@ -371,3 +371,10 @@ WHERE BookID = 1;
 --Try inserting a payment with: 
 --A zero or negative amount 
 --A missing payment method 
+INSERT INTO Payment (Method, Amount, Payment_Date, LoanID)
+VALUES
+( 0, '2025-04-26', 5);
+
+--Try inserting a review for: 
+-- A book that does not exist 
+-- A member who was never registered 

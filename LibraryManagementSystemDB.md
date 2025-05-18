@@ -518,3 +518,11 @@ INSERT INTO Payment (Method, Amount, Payment_Date, LoanID)
 VALUES
 ( 0, '2025-04-26', 5);
 ```
+
+### 9. Try inserting a review for: 
+- A book that does not exist 
+- A member who was never registered 
+```sql
+INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALUES
+('2025-05-05', 5, 49, 33);
+```

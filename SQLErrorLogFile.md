@@ -133,4 +133,20 @@ There are more columns in the INSERT statement than values specified in the VALU
 
 Completion time: 2025-05-18T15:15:40.6378761+04:00
 ```
-I understand that this is because amount and method have constraint so amount should be > 0 and method can not be null
+I understand that this is because amount and method have constraint so amount should be > 0 and method can not be null.
+
+## 7. Case 7:
+I am trying to inserting a review for book that does not exist, member who was never registered by this command:
+```sql
+INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALUES
+('2025-05-05', 5, 49, 33);
+```
+but I am getting the following error:
+```sql
+Msg 547, Level 16, State 0, Line 381
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Member_re__Membe__72C60C4A". The conflict occurred in database "LibraryManagementSystem", table "dbo.Member", column 'MemberID'.
+The statement has been terminated.
+
+Completion time: 2025-05-18T15:26:54.4816036+04:00
+```
+I understand that this is because BookID and MemberID are FK in Member_reviewed_books so I will not be able to add new review for an exist book or member 
