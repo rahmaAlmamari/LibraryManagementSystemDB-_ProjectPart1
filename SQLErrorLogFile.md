@@ -55,3 +55,34 @@ SET Genre =
 ALTER TABLE Book 
 ADD CONSTRAINT Ch_Value_Is CHECK (Genre IN ( 'Fiction', 'Non-fiction', 'Reference', 'Children' ));
 ```
+## 3. Case 3:
+I am trying to delete a member from the Member table how has existing loans, written book reviews with the following command:
+```sql
+DELETE FROM Member 
+WHERE MemberID = 5;
+```
+but I am getting the following error:
+```sql
+Msg 547, Level 16, State 0, Line 332
+The DELETE statement conflicted with the REFERENCE constraint "FK__Staff__MemberID__534D60F1". The conflict occurred in database "LibraryManagementSystem", table "dbo.Staff", column 'MemberID'.
+The statement has been terminated.
+
+Completion time: 2025-05-18T14:28:36.4870140+04:00
+```
+I understand that this is because the member has is in the Staff table also and I can not delete it. So, I have to delete the member from the Staff table and every table which link to it first and then delete it from the Member table.
+```sql
+DELETE FROM Staff 
+WHERE MemberID = 5; 
+
+DELETE FROM Member_books 
+WHERE MemberID = 5; 
+
+DELETE FROM Member_reviewed_books 
+WHERE MemberID = 5; 
+
+DELETE FROM Book
+WHERE MemberID = 5;  
+
+DELETE FROM Member 
+WHERE MemberID = 5;
+```
