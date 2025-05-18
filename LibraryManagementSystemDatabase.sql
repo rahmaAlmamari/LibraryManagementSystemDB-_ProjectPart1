@@ -343,3 +343,7 @@ WHERE MemberID = 5;
 
 DELETE FROM Member 
 WHERE MemberID = 5;
+
+--Try deleting a book that: 
+--Is currently on loan 
+--Has multiple reviews attached to it 

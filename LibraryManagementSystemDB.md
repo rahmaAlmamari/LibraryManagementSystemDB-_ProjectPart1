@@ -479,5 +479,18 @@ WHERE MemberID = 5;
 DELETE FROM Member 
 WHERE MemberID = 5;
 ```
+### 5. Try deleting a book that: 
+- Is currently on loan 
+- Has multiple reviews attached to it 
 
+```sql
+DELETE FROM Member_reviewed_books 
+WHERE BookID = 4; 
+
+DELETE FROM Member_books 
+WHERE BookID = 4; 
+
+DELETE FROM Book
+WHERE BookID = 4; 
+```
 
