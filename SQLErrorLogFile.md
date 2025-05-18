@@ -1,6 +1,6 @@
 #  **SQL Error Log File**
 
-1. Case 1:
+## 1. Case 1:
 I am trying to create Staff table with the following SQL command:
 ```sql
 CREATE TABLE Staff (
@@ -37,4 +37,21 @@ CREATE TABLE Staff (
 	ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
+```
+## 2. Case 2:
+I forget to add constraint of Genre column in Book table and I am trying to add it with the following command:
+```sql
+--1. update all the row in Book table to follow the constraint of Genre column 
+UPDATE Book
+SET Genre = 
+    CASE (BookID % 4)
+        WHEN 0 THEN 'Fiction'
+        WHEN 1 THEN 'Non-fiction'
+        WHEN 2 THEN 'Reference'
+        WHEN 3 THEN 'Children'
+    END;
+
+--2. add constraint of Genre column
+ALTER TABLE Book 
+ADD CONSTRAINT Ch_Value_Is CHECK (Genre IN ( 'Fiction', 'Non-fiction', 'Reference', 'Children' ));
 ```
