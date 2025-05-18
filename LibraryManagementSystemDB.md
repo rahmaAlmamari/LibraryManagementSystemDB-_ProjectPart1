@@ -459,4 +459,25 @@ DELETE FROM Payment
 WHERE PaymentID = 1;
 ```
 
+### 4. Try deleting a member who: 
+- Has existing loans 
+- Has written book reviews 
+
+```sql
+DELETE FROM Staff 
+WHERE MemberID = 5; 
+
+DELETE FROM Member_books 
+WHERE MemberID = 5; 
+
+DELETE FROM Member_reviewed_books 
+WHERE MemberID = 5; 
+
+DELETE FROM Book
+WHERE MemberID = 5;  
+
+DELETE FROM Member 
+WHERE MemberID = 5;
+```
+
 

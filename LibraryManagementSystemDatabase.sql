@@ -311,4 +311,35 @@ INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
 ('Returned', 6, 1, 6);
 
 --Update loan status 
-UPDATE 
+UPDATE Member_books 
+SET Status = 'Returned'
+WHERE LoanID = 1 AND  
+      MemberID = 1 AND 
+	  BookID = 1;
+
+--Delete reviews/payments 
+
+-- Review
+DELETE FROM Review 
+WHERE ReviewID = 1;
+
+-- payments
+DELETE FROM Payment 
+WHERE PaymentID = 1;
+
+--Try deleting a member who: 
+-- Has existing loans , Has written book reviews 
+DELETE FROM Staff 
+WHERE MemberID = 5; 
+
+DELETE FROM Member_books 
+WHERE MemberID = 5; 
+
+DELETE FROM Member_reviewed_books 
+WHERE MemberID = 5; 
+
+DELETE FROM Book
+WHERE MemberID = 5;  
+
+DELETE FROM Member 
+WHERE MemberID = 5;
