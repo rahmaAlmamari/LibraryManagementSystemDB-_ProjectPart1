@@ -347,3 +347,27 @@ WHERE MemberID = 5;
 --Try deleting a book that: 
 --Is currently on loan 
 --Has multiple reviews attached to it 
+DELETE FROM Member_reviewed_books 
+WHERE BookID = 4; 
+
+DELETE FROM Member_books 
+WHERE BookID = 4; 
+
+DELETE FROM Book
+WHERE BookID = 4; 
+
+--Try inserting a loan for: 
+-- A member who doesn’t exist 
+-- A book that doesn’t exist 
+INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
+('Issued', 1, 30, 30);
+
+--Try updating a book’s genre to: 
+--A value not included in your allowed genre list (e.g., 'Sci-Fi') 
+UPDATE Book 
+SET Genre = 'Sci-Fi'
+WHERE BookID = 1;
+
+--Try inserting a payment with: 
+--A zero or negative amount 
+--A missing payment method 

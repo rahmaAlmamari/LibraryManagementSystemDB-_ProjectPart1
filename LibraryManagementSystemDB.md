@@ -504,10 +504,17 @@ INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
 ```
 ### 7. Try updating a book’s genre to: 
 - A value not included in your allowed genre list (e.g., 'Sci-Fi') 
-
 ```sql
 UPDATE Book 
 SET Genre = 'Sci-Fi'
 WHERE BookID = 1;
 ```
 
+### 8. Try inserting a payment with: 
+- A zero or negative amount 
+- A missing payment method 
+```sql
+INSERT INTO Payment (Method, Amount, Payment_Date, LoanID)
+VALUES
+( 0, '2025-04-26', 5);
+```

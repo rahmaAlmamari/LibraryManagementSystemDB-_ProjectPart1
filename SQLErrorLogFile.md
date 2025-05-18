@@ -118,3 +118,19 @@ The statement has been terminated.
 Completion time: 2025-05-18T15:01:12.1841277+04:00
 ```
 I understand that this is because genre have a set of value which need to be follow
+
+## 6. Case 6:
+I am trying to inserting a payment with zero or negative amount, missing payment method  by this command:
+```sql
+INSERT INTO Payment (Method, Amount, Payment_Date, LoanID)
+VALUES
+( 0, '2025-04-26', 5);
+```
+but I am getting the following error:
+```sql
+Msg 109, Level 15, State 1, Line 374
+There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+
+Completion time: 2025-05-18T15:15:40.6378761+04:00
+```
+I understand that this is because amount and method have constraint so amount should be > 0 and method can not be null
