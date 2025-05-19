@@ -620,4 +620,10 @@ INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
 
 ### 12. Update the return date of your loan to today. 
 ```sql
+UPDATE Loan 
+SET Return_Date = getdate()
+WHERE LoanID = 8;
+
+SELECT Return_Date FROM Loan WHERE LoanID = 8;
 ```
+![Task 7 requirment 12](./image/Task7requirment12.PNG)
