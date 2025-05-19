@@ -601,7 +601,18 @@ SELECT Title FROM Book WHERE MemberID = 2;
 
 ### 10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011. 
 ```sql
+SET IDENTITY_INSERT Member ON;
+
+INSERT INTO Member (MemberID, Full_Name, Email, Membership_Start_Date, LibraryID)
+VALUES
+(405, 'Rahma Almamari', 'Rahma.Almamari@example.com', '2024-05-10', 3);
+
+SET IDENTITY_INSERT Member OFF ;
+
+INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
+('Issued', 8, 405, 8);
 ```
+![Task 7 requirment 10](./image/Task7requirment10.png)
 
 ### 11. Insert a member with NULL email and phone. 
 ```sql
