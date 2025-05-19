@@ -545,3 +545,52 @@ VALUES
 INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALUES
 ('2025-05-05', 5, 49, 33);
 ```
+
+## **Task 7: Library Database – DQL & DML Tasks** 
+### 1. Display all book records. 
+```sql
+```
+
+### 2. Show each book’s title, genre, and availability. 
+```sql
+```
+
+### 3. Display all members' names, email, and membership start date. 
+```sql
+```
+
+### 4. Display each book’s title and price with alias “BookPrice”. 
+```sql
+```
+
+### 5. List books priced above 250 LE. 
+```sql
+```
+
+### 6. List members who joined before 2023.
+```sql
+```
+
+### 7. Display names and roles of staff working in 'Zamalek Branch'. 
+```sql
+```
+
+### 8. Display branch name managed by staff ID = 3008. 
+```sql
+```
+
+### 9. List titles and authors of books available in branch ID = 2. 
+```sql
+```
+
+### 10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011. 
+```sql
+```
+
+### 11. Insert a member with NULL email and phone. 
+```sql
+```
+
+### 12. Update the return date of your loan to today. 
+```sql
+```
