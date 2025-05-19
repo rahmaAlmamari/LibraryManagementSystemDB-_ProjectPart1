@@ -555,7 +555,9 @@ SELECT * FROM Book;
 
 ### 2. Show each book’s title, genre, and availability. 
 ```sql
+SELECT Title, Genre, Availability_Status FROM Book;
 ```
+![Task 7 requirment 2](./image/Task7requirment2.PNG)
 
 ### 3. Display all members' names, email, and membership start date. 
 ```sql
