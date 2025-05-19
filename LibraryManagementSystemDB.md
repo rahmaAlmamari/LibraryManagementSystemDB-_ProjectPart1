@@ -549,7 +549,9 @@ INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALU
 ## **Task 7: Library Database – DQL & DML Tasks** 
 ### 1. Display all book records. 
 ```sql
+SELECT * FROM Book;
 ```
+![Task 7 requirment 1](./image/Task7requirment1.PNG)
 
 ### 2. Show each book’s title, genre, and availability. 
 ```sql

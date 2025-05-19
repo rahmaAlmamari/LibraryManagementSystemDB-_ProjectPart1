@@ -380,3 +380,5 @@ VALUES
 -- A member who was never registered 
 INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALUES
 ('2025-05-05', 5, 49, 33);
+
+----------------------------------------------------------TASK 7-------------------------------------------------------------
