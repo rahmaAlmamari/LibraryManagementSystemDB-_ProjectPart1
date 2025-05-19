@@ -595,7 +595,9 @@ SELECT * FROM Member WHERE Membership_Start_Date < '1-1-2023';
 
 ### 9. List titles and authors of books available in branch ID = 2. 
 ```sql
+SELECT Title FROM Book WHERE MemberID = 2;
 ```
+![Task 7 requirment 9](./image/Task7requirment9.PNG)
 
 ### 10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011. 
 ```sql

@@ -382,3 +382,21 @@ INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALU
 ('2025-05-05', 5, 49, 33);
 
 ----------------------------------------------------------TASK 7-------------------------------------------------------------
+--1. Display all book records.
+SELECT * FROM Book;
+--2. Show each book’s title, genre, and availability. 
+SELECT Title, Genre, Availability_Status FROM Book;
+--3. Display all members' names, email, and membership start date. 
+SELECT Full_Name, Email, Membership_Start_Date FROM Member;
+--4. Display each book’s title and price with alias “BookPrice”. 
+SELECT CONCAT (Title , ' ' , Price) as 'BookPrice' FROM Book;
+--5. List books priced above 250 LE. 
+SELECT * FROM Book WHERE Price > 250;
+--6. List members who joined before 2023.
+SELECT * FROM Member WHERE Membership_Start_Date < '1-1-2023';
+--7. Display names and roles of staff working in 'Zamalek Branch'. 
+SELECT * FROM Staff;
+--8. Display branch name managed by staff ID = 3.
+SELECT * FROM Library;
+SELECT * FROM Staff;
+
