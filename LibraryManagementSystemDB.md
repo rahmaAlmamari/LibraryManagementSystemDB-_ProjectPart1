@@ -567,11 +567,17 @@ SELECT Full_Name, Email, Membership_Start_Date FROM Member;
 
 ### 4. Display each book’s title and price with alias “BookPrice”. 
 ```sql
+SELECT CONCAT (Title , ' ' , Price) as 'BookPrice' FROM Book;
 ```
+![Task 7 requirment 4](./image/Task7requirment4.png)
 
 ### 5. List books priced above 250 LE. 
 ```sql
+SELECT * FROM Book WHERE Price > 250;
 ```
+![Task 7 requirment 5](./image/Task7requirment5.png)
+There are no record match the case.
+
 
 ### 6. List members who joined before 2023.
 ```sql
