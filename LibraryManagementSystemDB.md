@@ -551,19 +551,19 @@ INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALU
 ```sql
 SELECT * FROM Book;
 ```
-![Task 7 requirment 1](./image/Task7requirment1.PNG)
+![Task 7 requirment 1](./image/Task7requirment1.png)
 
 ### 2. Show each book’s title, genre, and availability. 
 ```sql
 SELECT Title, Genre, Availability_Status FROM Book;
 ```
-![Task 7 requirment 2](./image/Task7requirment2.PNG)
+![Task 7 requirment 2](./image/Task7requirment2.png)
 
 ### 3. Display all members' names, email, and membership start date. 
 ```sql
 SELECT Full_Name, Email, Membership_Start_Date FROM Member;
 ```
-![Task 7 requirment 3](./image/Task7requirment3.PNG)
+![Task 7 requirment 3](./image/Task7requirment3.png)
 
 ### 4. Display each book’s title and price with alias “BookPrice”. 
 ```sql
@@ -597,7 +597,7 @@ SELECT * FROM Member WHERE Membership_Start_Date < '1-1-2023';
 ```sql
 SELECT Title FROM Book WHERE MemberID = 2;
 ```
-![Task 7 requirment 9](./image/Task7requirment9.PNG)
+![Task 7 requirment 9](./image/Task7requirment9.png)
 
 ### 10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011. 
 ```sql
@@ -626,4 +626,4 @@ WHERE LoanID = 8;
 
 SELECT Return_Date FROM Loan WHERE LoanID = 8;
 ```
-![Task 7 requirment 12](./image/Task7requirment12.PNG)
+![Task 7 requirment 12](./image/Task7requirment12.png)
