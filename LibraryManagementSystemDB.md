@@ -581,7 +581,9 @@ There are no record match the case.
 
 ### 6. List members who joined before 2023.
 ```sql
+SELECT * FROM Member WHERE Membership_Start_Date < '1-1-2023';
 ```
+![Task 7 requirment 6](./image/Task7requirment6.png)
 
 ### 7. Display names and roles of staff working in 'Zamalek Branch'. 
 ```sql
