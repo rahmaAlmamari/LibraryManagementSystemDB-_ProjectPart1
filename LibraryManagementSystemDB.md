@@ -561,7 +561,9 @@ SELECT Title, Genre, Availability_Status FROM Book;
 
 ### 3. Display all members' names, email, and membership start date. 
 ```sql
+SELECT Full_Name, Email, Membership_Start_Date FROM Member;
 ```
+![Task 7 requirment 3](./image/Task7requirment3.PNG)
 
 ### 4. Display each book’s title and price with alias “BookPrice”. 
 ```sql
