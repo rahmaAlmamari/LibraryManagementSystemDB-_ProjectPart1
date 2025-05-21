@@ -627,3 +627,60 @@ WHERE LoanID = 8;
 SELECT Return_Date FROM Loan WHERE LoanID = 8;
 ```
 ![Task 7 requirment 12](./image/Task7requirment12.png)
+
+## **Task 8: Library Database – JOIN Queries** 
+
+### 1. Display library ID, name, and the name of the manager. 
+```sql
+SELECT * FROM Library;
+SELECT * FROM Staff;
+
+SELECT L.LibraryID, L.LibraryName, S.Full_Name
+FROM Library L, Staff S
+WHERE L.LibraryID = S.LibraryID;
+```
+
+### 2. Display library names and the books available in each one. 
+```sql
+```
+
+### 3. Display all member data along with their loan history. 
+ ```sql
+```
+
+### 4. Display all books located in 'Zamalek' or 'Downtown'. 
+```sql
+```
+
+### 5. Display all books whose titles start with 'T'. 
+```sql
+```
+
+### 6. List members who borrowed books priced between 100 and 300 LE. 
+```sql
+```
+
+### 7. Retrieve members who borrowed and returned books titled 'The Alchemist'. 
+```sql
+```
+
+### 8. Find all members assisted by librarian "Sarah Fathy".
+```sql
+```
+
+### 9. Display each member’s name and the books they borrowed, ordered by book title. 
+```sql
+```
+
+### 10. For each book located in 'Cairo Branch', show title, library name, manager, and shelf info. 
+```sql
+```
+
+### 11. Display all staff members who manage libraries. 
+```sql
+```
+
+### 12. Display all members and their reviews, even if some didn’t submit any review yet.
+```sql
+```
+

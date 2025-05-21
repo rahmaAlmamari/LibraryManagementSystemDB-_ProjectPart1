@@ -399,4 +399,35 @@ SELECT * FROM Staff;
 --8. Display branch name managed by staff ID = 3.
 SELECT * FROM Library;
 SELECT * FROM Staff;
+--9. List titles and authors of books available in branch ID = 2. 
+SELECT Title FROM Book WHERE MemberID = 2;
+--10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011.
+SELECT * FROM Member;
 
+SET IDENTITY_INSERT Member ON;
+
+INSERT INTO Member (MemberID, Full_Name, Email, Membership_Start_Date, LibraryID)
+VALUES
+(405, 'Rahma Almamari', 'Rahma.Almamari@example.com', '2024-05-10', 3);
+
+SET IDENTITY_INSERT Member OFF ;
+
+INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
+('Issued', 8, 405, 8);
+
+--11. Insert a member with NULL email and phone. 
+--12. Update the return date of your loan to today. 
+UPDATE Loan 
+SET Return_Date = getdate()
+WHERE LoanID = 8;
+
+SELECT Return_Date FROM Loan WHERE LoanID = 8;
+
+----------------------------------------------------------------------------TASK 8---------------------------------------------------------------
+--1. Display library ID, name, and the name of the manager.
+SELECT * FROM Library;
+SELECT * FROM Staff;
+
+SELECT L.LibraryID, L.LibraryName, S.Full_Name
+FROM Library L, Staff S
+WHERE L.LibraryID = S.LibraryID;
