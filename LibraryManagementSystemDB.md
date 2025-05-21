@@ -673,6 +673,7 @@ WHERE L.LibraryID = B.LibraryID AND L.LibraryLocation = 'Downtown, Central City'
 
 ### 5. Display all books whose titles start with 'T'. 
 ```sql
+SELECT * FROM Book WHERE Title LIKE 'T%';
 ```
 
 ### 6. List members who borrowed books priced between 100 and 300 LE. 
