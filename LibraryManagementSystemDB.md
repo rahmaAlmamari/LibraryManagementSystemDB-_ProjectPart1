@@ -738,5 +738,12 @@ SELECT * FROM Staff WHERE LibraryID IS NOT NULL AND MemberID IS NOT NULL;
 
 ### 12. Display all members and their reviews, even if some didn’t submit any review yet.
 ```sql
+SELECT * FROM Member;
+SELECT * FROM Member_reviewed_books;
+SELECT * FROM Review;
+
+SELECT M.Full_Name, R.Comment
+FROM Member M FULL OUTER JOIN Member_reviewed_books MRB ON M.MemberID = MRB.MemberID
+FULL OUTER JOIN Review R ON R.ReviewID = MRB.ReviewID;
 ```
 

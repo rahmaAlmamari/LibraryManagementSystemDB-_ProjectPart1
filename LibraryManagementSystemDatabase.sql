@@ -507,3 +507,5 @@ WHERE L.LibraryLocation = 'Downtown, Central City';
 
 --11. Display all staff members who manage libraries. 
 SELECT * FROM Staff WHERE LibraryID IS NOT NULL AND MemberID IS NOT NULL;
+
+--12. Display all members and their reviews, even if some didn’t submit any review yet. 
