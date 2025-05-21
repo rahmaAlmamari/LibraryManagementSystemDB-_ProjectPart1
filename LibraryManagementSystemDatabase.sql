@@ -485,3 +485,12 @@ SELECT * FROM Library;
 SELECT M.Full_Name
 FROM Member M, Library L 
 WHERE L.LibraryID = M.LibraryID AND L.LibraryName = 'Greenwood Community Library';
+
+--9. Display each member’s name and the books they borrowed, ordered by book title. 
+SELECT * FROM Member;
+SELECT * FROM Book;
+
+SELECT M.Full_Name, B.Title
+FROM Member M, Book B
+WHERE M.MemberID = B.MemberID 
+ORDER BY B.Title;

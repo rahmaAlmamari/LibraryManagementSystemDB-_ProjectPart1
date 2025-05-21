@@ -710,6 +710,13 @@ WHERE L.LibraryID = M.LibraryID AND L.LibraryName = 'Greenwood Community Library
 
 ### 9. Display each member’s name and the books they borrowed, ordered by book title. 
 ```sql
+SELECT * FROM Member;
+SELECT * FROM Book;
+
+SELECT M.Full_Name, B.Title
+FROM Member M, Book B
+WHERE M.MemberID = B.MemberID 
+ORDER BY B.Title;
 ```
 
 ### 10. For each book located in 'Cairo Branch', show title, library name, manager, and shelf info. 
