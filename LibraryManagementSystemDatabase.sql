@@ -504,3 +504,6 @@ SELECT B.Title, L.LibraryName, S.Full_Name, B.Shelf_Location
 FROM Library L INNER JOIN Book B ON L.LibraryID = B.LibraryID
 INNER JOIN Staff S ON L.LibraryID = S.LibraryID
 WHERE L.LibraryLocation = 'Downtown, Central City';
+
+--11. Display all staff members who manage libraries. 
+SELECT * FROM Staff WHERE LibraryID IS NOT NULL AND MemberID IS NOT NULL;
