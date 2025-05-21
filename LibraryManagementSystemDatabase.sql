@@ -440,4 +440,11 @@ SELECT L.LibraryName, B.Title
 FROM Library L, Book B
 WHERE L.LibraryID = B.LibraryID;
 
---
+--3. Display all member data along with their loan history. 
+SELECT * FROM Member;
+SELECT * FROM Loan;
+SELECT * FROM Member_books;
+
+SELECT M.*, L.Due_Date, L.Loan_Date, L.Return_Date, MB.Status
+FROM Member M INNER JOIN Member_books MB ON M.MemberID = MB.MemberID
+INNER JOIN Loan L ON L.LoanID = MB.LoanID;
