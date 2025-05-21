@@ -467,3 +467,14 @@ SELECT * FROM Member;
 SELECT M.Full_Name
 FROM Member M, Book B
 WHERE M.MemberID = B.MemberID AND B.Price between 20 and 30;
+
+--7. Retrieve members who borrowed and returned books titled 'The Alchemist'. 
+SELECT * FROM Book;
+SELECT * FROM Member;
+SELECT * FROM Member_books;
+
+SELECT M.Full_Name
+FROM Member M INNER JOIN Book B ON M.MemberID = B.MemberID 
+INNER JOIN Member_books MB ON B.BookID = MB.BookID
+WHERE MB.Status = 'Returned' AND B.Title = 'The Silent River';
+
