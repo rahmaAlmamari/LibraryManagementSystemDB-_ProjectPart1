@@ -663,6 +663,12 @@ INNER JOIN Loan L ON L.LoanID = MB.LoanID;
 
 ### 4. Display all books located in 'Zamalek' or 'Downtown'. 
 ```sql
+SELECT * FROM Book;
+SELECT * FROM Library;
+
+SELECT B.Title
+FROM Book B, Library L
+WHERE L.LibraryID = B.LibraryID AND L.LibraryLocation = 'Downtown, Central City';
 ```
 
 ### 5. Display all books whose titles start with 'T'. 
