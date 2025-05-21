@@ -456,3 +456,14 @@ SELECT * FROM Library;
 SELECT B.Title
 FROM Book B, Library L
 WHERE L.LibraryID = B.LibraryID AND L.LibraryLocation = 'Downtown, Central City';
+
+--5. Display all books whose titles start with 'T'. 
+SELECT * FROM Book WHERE Title LIKE 'T%';
+
+--6. List members who borrowed books priced between 100 and 300 LE.
+SELECT * FROM Book;
+SELECT * FROM Member;
+
+SELECT M.Full_Name
+FROM Member M, Book B
+WHERE M.MemberID = B.MemberID AND B.Price between 20 and 30;

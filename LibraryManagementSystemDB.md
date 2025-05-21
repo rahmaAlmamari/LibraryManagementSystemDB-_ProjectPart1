@@ -678,6 +678,12 @@ SELECT * FROM Book WHERE Title LIKE 'T%';
 
 ### 6. List members who borrowed books priced between 100 and 300 LE. 
 ```sql
+SELECT * FROM Book;
+SELECT * FROM Member;
+
+SELECT M.Full_Name
+FROM Member M, Book B
+WHERE M.MemberID = B.MemberID AND B.Price between 20 and 30;
 ```
 
 ### 7. Retrieve members who borrowed and returned books titled 'The Alchemist'. 
