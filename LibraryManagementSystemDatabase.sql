@@ -478,3 +478,10 @@ FROM Member M INNER JOIN Book B ON M.MemberID = B.MemberID
 INNER JOIN Member_books MB ON B.BookID = MB.BookID
 WHERE MB.Status = 'Returned' AND B.Title = 'The Silent River';
 
+--8. Find all members assisted by librarian "Sarah Fathy". 
+SELECT * FROM Member;
+SELECT * FROM Library;
+
+SELECT M.Full_Name
+FROM Member M, Library L 
+WHERE L.LibraryID = M.LibraryID AND L.LibraryName = 'Greenwood Community Library';

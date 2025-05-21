@@ -700,6 +700,12 @@ WHERE MB.Status = 'Returned' AND B.Title = 'The Silent River';
 
 ### 8. Find all members assisted by librarian "Sarah Fathy".
 ```sql
+SELECT * FROM Member;
+SELECT * FROM Library;
+
+SELECT M.Full_Name
+FROM Member M, Library L 
+WHERE L.LibraryID = M.LibraryID AND L.LibraryName = 'Greenwood Community Library';
 ```
 
 ### 9. Display each member’s name and the books they borrowed, ordered by book title. 
