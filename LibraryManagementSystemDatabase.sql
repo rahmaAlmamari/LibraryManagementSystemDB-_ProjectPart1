@@ -431,3 +431,13 @@ SELECT * FROM Staff;
 SELECT L.LibraryID, L.LibraryName, S.Full_Name
 FROM Library L, Staff S
 WHERE L.LibraryID = S.LibraryID;
+
+--2. Display library names and the books available in each one. 
+SELECT * FROM Library;
+SELECT * FROM Book;
+
+SELECT L.LibraryName, B.Title
+FROM Library L, Book B
+WHERE L.LibraryID = B.LibraryID;
+
+--

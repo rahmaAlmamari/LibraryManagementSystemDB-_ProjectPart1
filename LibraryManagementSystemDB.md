@@ -642,6 +642,12 @@ WHERE L.LibraryID = S.LibraryID;
 
 ### 2. Display library names and the books available in each one. 
 ```sql
+SELECT * FROM Library;
+SELECT * FROM Book;
+
+SELECT L.LibraryName, B.Title
+FROM Library L, Book B
+WHERE L.LibraryID = B.LibraryID;
 ```
 
 ### 3. Display all member data along with their loan history. 
