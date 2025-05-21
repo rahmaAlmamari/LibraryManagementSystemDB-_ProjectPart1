@@ -721,6 +721,14 @@ ORDER BY B.Title;
 
 ### 10. For each book located in 'Cairo Branch', show title, library name, manager, and shelf info. 
 ```sql
+SELECT * FROM Book;
+SELECT * FROM Library;
+SELECT * FROM Staff;
+
+SELECT B.Title, L.LibraryName, S.Full_Name, B.Shelf_Location
+FROM Library L INNER JOIN Book B ON L.LibraryID = B.LibraryID
+INNER JOIN Staff S ON L.LibraryID = S.LibraryID
+WHERE L.LibraryLocation = 'Downtown, Central City';
 ```
 
 ### 11. Display all staff members who manage libraries. 
