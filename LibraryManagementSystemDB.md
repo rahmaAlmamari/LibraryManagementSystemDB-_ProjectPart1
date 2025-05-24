@@ -624,7 +624,13 @@ INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
 
 ### 11. Insert a member with NULL email and phone. 
 ```sql
+INSERT INTO Member (Full_Name, Email, Membership_Start_Date, LibraryID)
+VALUES
+('Jessica Miller', null, '2024-05-10', 3);
+
+SELECT * FROM Member;
 ```
+It can not insert a member with NULL email and phone because the email column is set to NOT NULL in the Member table schema.
 
 ### 12. Update the return date of your loan to today. 
 ```sql

@@ -422,6 +422,12 @@ INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
 ('Issued', 8, 405, 8);
 
 --11. Insert a member with NULL email and phone. 
+INSERT INTO Member (Full_Name, Email, Membership_Start_Date, LibraryID)
+VALUES
+('Jessica Miller', null, '2024-05-10', 3);
+
+SELECT * FROM Member;
+
 --12. Update the return date of your loan to today. 
 UPDATE Loan 
 SET Return_Date = getdate()
