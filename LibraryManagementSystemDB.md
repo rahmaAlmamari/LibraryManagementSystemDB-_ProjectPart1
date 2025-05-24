@@ -587,6 +587,10 @@ SELECT * FROM Member WHERE Membership_Start_Date < '1-1-2023';
 
 ### 7. Display names and roles of staff working in 'Zamalek Branch'. 
 ```sql
+SELECT * FROM Staff;
+SELECT * FROM Library;
+
+SELECT Full_Name, Position FROM Staff WHERE LibraryID = 1;
 ```
 
 ### 8. Display branch name managed by staff ID = 3008. 

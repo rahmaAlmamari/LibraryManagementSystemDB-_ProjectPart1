@@ -225,19 +225,19 @@ SELECT * FROM Staff_Contact_Number;
 --to insert date to Book table
 INSERT INTO Book (ISBN, Title, Genre, Shelf_Location, Price, Availability_Status, LibraryID, MemberID)
 VALUES
-('978-1234567890', 'The Silent River', 'Mystery', 'Shelf A1', 25, 'FALSE', 1, 1),
-('978-2345678901', 'Journey Through Time', 'Science Fiction', 'Shelf B2', 30, 'TRUE', 2, 2),
-('978-3456789012', 'Gardening Basics', 'Non-Fiction', 'Shelf C3', 20, 'FALSE', 3, 3),
-('978-4567890123', 'The Art of Cooking', 'Cooking', 'Shelf D4', 28, 'TRUE', 4, 4),
-('978-5678901234', 'Legends of the East', 'Fantasy', 'Shelf E5', 35, 'FALSE', 5, 5);
+('978-1234567890', 'The Silent River', 'Fiction', 'Shelf A1', 25, 'FALSE', 1, 1),
+('978-2345678901', 'Journey Through Time', 'Reference', 'Shelf B2', 30, 'TRUE', 2, 2),
+('978-3456789012', 'Gardening Basics', 'Fiction', 'Shelf C3', 20, 'FALSE', 3, 3),
+('978-4567890123', 'The Art of Cooking', 'Children', 'Shelf D4', 28, 'TRUE', 4, 4),
+('978-5678901234', 'Legends of the East', 'Fiction', 'Shelf E5', 35, 'FALSE', 5, 5);
 
 INSERT INTO Book (ISBN, Title, Genre, Shelf_Location, Price, Availability_Status, LibraryID, MemberID)
 VALUES
-('978-1111111111', 'Deep Space Odyssey', 'Science Fiction', 'Shelf A1', 45, 'TRUE', 1, 1),
-('978-2222222222', 'History of Rome', 'History', 'Shelf B2', 30, 'FALSE', 2, 2),
-('978-3333333333', 'Cooking 101', 'Cooking', 'Shelf C3', 25, 'TRUE', 3, 3),
-('978-4444444444', 'Modern Art', 'Art', 'Shelf D4', 50, 'FALSE', 4, 4),
-('978-5555555555', 'Wildlife Photography', 'Photography', 'Shelf E5', 40, 'TRUE', 5, 5);
+('978-1111111111', 'Deep Space Odyssey', 'Children', 'Shelf A1', 45, 'TRUE', 1, 1),
+('978-2222222222', 'History of Rome', 'Children', 'Shelf B2', 30, 'FALSE', 2, 2),
+('978-3333333333', 'Cooking 101', 'Fiction', 'Shelf C3', 25, 'TRUE', 3, 3),
+('978-4444444444', 'Modern Art', 'Reference', 'Shelf D4', 50, 'FALSE', 4, 4),
+('978-5555555555', 'Wildlife Photography', 'Reference', 'Shelf E5', 40, 'TRUE', 5, 5);
 
 SELECT * FROM Book;
 
@@ -273,8 +273,8 @@ SELECT * FROM Payment;
 
 --to insert date to Member_books table
 INSERT INTO Member_books (Status, LoanID, MemberID, BookID) VALUES
-('Issued', 1, 1, 1),
-('Returned', 2, 2, 2),
+('Issued', 1, 1, 7),
+('Returned', 2, 2, 8),
 ('Overdue', 3, 3, 3),
 ('Issued', 4, 4, 4),
 ('Returned', 5, 5, 5);
@@ -296,8 +296,8 @@ SELECT * FROM Review;
 
 --to insert date to Member_reviewed_books table
 INSERT INTO Member_reviewed_books (Review_Date, ReviewID, MemberID, BookID) VALUES
-('2025-05-01', 1, 1, 1),
-('2025-05-02', 2, 2, 2),
+('2025-05-01', 1, 1, 7),
+('2025-05-02', 2, 2, 8),
 ('2025-05-03', 3, 3, 3),
 ('2025-05-04', 4, 4, 4),
 ('2025-05-05', 5, 5, 5);
@@ -315,7 +315,7 @@ UPDATE Member_books
 SET Status = 'Returned'
 WHERE LoanID = 1 AND  
       MemberID = 1 AND 
-	  BookID = 1;
+	  BookID = 7;
 
 --Delete reviews/payments 
 
@@ -396,6 +396,9 @@ SELECT * FROM Book WHERE Price > 250;
 SELECT * FROM Member WHERE Membership_Start_Date < '1-1-2023';
 --7. Display names and roles of staff working in 'Zamalek Branch'. 
 SELECT * FROM Staff;
+SELECT * FROM Library;
+
+SELECT Full_Name, Position FROM Staff WHERE LibraryID = 1;
 --8. Display branch name managed by staff ID = 3.
 SELECT * FROM Library;
 SELECT * FROM Staff;
