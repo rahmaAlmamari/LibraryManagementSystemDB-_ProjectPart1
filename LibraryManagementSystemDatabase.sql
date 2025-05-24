@@ -528,3 +528,28 @@ SELECT * FROM Review;
 SELECT M.Full_Name, R.Comment
 FROM Member M FULL OUTER JOIN Member_reviewed_books MRB ON M.MemberID = MRB.MemberID
 FULL OUTER JOIN Review R ON R.ReviewID = MRB.ReviewID;
+
+-------------------------------------------------------TASK 9--------------------------------------
+--26. Count total books in Books table.
+SELECT COUNT(*) AS TotalBooks
+FROM Book;
+
+--27. Average book price from Books table. 
+SELECT AVG(Price) AS AverageBookPrice
+FROM Book;
+
+--28. Count books per library grouped by Library_ID. 
+SELECT LibraryID, COUNT(*) AS BooksPerLibrary
+FROM Book
+GROUP BY LibraryID;
+
+--29. Count books borrowed per member from Borrows table grouped by Member_ID. 
+SELECT MemberID, COUNT(*) AS BorrowedBooks
+FROM Member_books
+GROUP BY MemberID;
+
+--30. List members who borrowed more than 3 books grouped by Member_ID. 
+SELECT MemberID, COUNT(*) AS BorrowedBooks
+FROM Member_books
+GROUP BY MemberID
+HAVING COUNT(*) > 3;
