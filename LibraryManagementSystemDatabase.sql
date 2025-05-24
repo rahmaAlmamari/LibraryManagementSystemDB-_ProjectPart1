@@ -402,6 +402,9 @@ SELECT Full_Name, Position FROM Staff WHERE LibraryID = 1;
 --8. Display branch name managed by staff ID = 3.
 SELECT * FROM Library;
 SELECT * FROM Staff;
+
+SELECT LibraryName FROM Library L, Staff S WHERE L.LibraryID = S.LibraryID;
+
 --9. List titles and authors of books available in branch ID = 2. 
 SELECT Title FROM Book WHERE MemberID = 2;
 --10. Insert yourself as a member with ID = 405 and register to borrow book ID = 1011.
